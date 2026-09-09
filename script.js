@@ -43,14 +43,29 @@ const projects = [
 
 function renderProjects() {
     const container = document.getElementById('projectList');
-    container.innerHTML = projects.map(p => `
-        <div class="project-card">
-        <h3><a href="${p.url}" target="_blank">${p.name}</a></h3>
-        <ul class="specs">
-        ${p.specs.map(s => `<li><span class="speclabel">${s.label}</span>: ${s.value}</li>`).join('')}
-        </ul>
-        </div>
-        `).join('');
+    container.innerHTML = '';
+    projects.forEach((p, i) => {
+        container.innerHTML += `<h3><a href="${p.url}" target="_blank">${p.name}</a> <span class="triangle" onclick="toggleSpecs(${i})">Info</span></h3><div class="specs-panel" id="specs-${i}" style="display:none;"></div>`;
+        p.specs.forEach(s => {
+            document.getElementById('specs-' + i).innerHTML += `<p>${s.label}: ${s.value}</p>`
+        });
+    });
 }
-showSection('intro');
+
+function toggleSpecs(i) {
+    const panel = document.getElementById('specs-' + i);
+    const isopen = panel.style.display === 'block';
+    document.querySelectorAll('.specs-panel').forEach(p => p.style.display = 'none');
+
+    if(!isopen) {
+        panel.style.display = 'block';
+    }
+}
+
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('triangle')) {
+        return;
+    }
+    document.querySelectorAll('.specs-panel').forEach(p => p.style.display = 'none');
+});
 renderProjects();
