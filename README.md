@@ -2,6 +2,8 @@
 
 ## Screenshots
 
+![homepage screenshot](screenshots/homepage.png)
+
 ## What is this site
 This is a about me site i made using html css and java script it has three pages first is about me, secnd page is about my projects and the third is about my contact
 It is a simple about me site.
