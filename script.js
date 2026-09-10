@@ -1,7 +1,5 @@
-function showSection(id) {
-    document.querySelectorAll('section').forEach(s => s.style.display = 'none');
-    document.getElementById(id).style.display = 'block';
-}
+   
+
 
 showSection('intro')
 
@@ -60,6 +58,17 @@ function toggleSpecs(i) {
     if(!isopen) {
         panel.style.display = 'block';
     }
+}
+
+function showSection(id) {
+    document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+    const target = document.getElementById(id);
+    target.style.display = 'block';
+    target.style.opacity = 0;
+
+    setTimeout(function() {
+        target.style.opacity = 1;
+    }, 20);
 }
 
 document.addEventListener('click', function(event) {
