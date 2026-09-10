@@ -71,13 +71,24 @@ section {
 
 }
 
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
 .dot {
     display: inline-block;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     border: 1.5px solid #344604;
-    margin-right: 8px;
     position: relative;
 }
 
@@ -92,3 +103,6 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+

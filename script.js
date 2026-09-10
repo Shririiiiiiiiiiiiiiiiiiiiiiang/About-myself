@@ -69,6 +69,9 @@ function showSection(id) {
     setTimeout(function() {
         target.style.opacity = 1;
     }, 20);
+
+    document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+    document.querySelector('.dot[data-section="' + id + '"]').classList.add('active');
 }
 
 document.addEventListener('click', function(event) {
