@@ -1,5 +1,9 @@
 body {
+    min-height: 100vh;
     background: #f3edd9;
+    background-image: linear-gradient(135deg, transparent 55%, #d4c9a1 65%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     color: #425709;
     font-family: "Courier New";
 }
@@ -35,4 +39,29 @@ body {
 .speclabel {
     font-weight: bold;
     text-transform: capitalize
+}
+
+.info {
+    cursor: pointer;
+    color: #2d3a0a;
+}
+
+.info:hover {
+    color: #f3e5ba;
+    background: #324205;
+    padding: 2px 6px;
+}
+
+nav button {
+    background: #f3ebd3;
+    color: #324205; 
+    border: 1px solid #243000;
+    font-family: "Courier New";
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #324205;
+    color: #f3ebd3;
 }

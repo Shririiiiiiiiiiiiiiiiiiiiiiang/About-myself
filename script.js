@@ -45,7 +45,7 @@ function renderProjects() {
     const container = document.getElementById('projectList');
     container.innerHTML = '';
     projects.forEach((p, i) => {
-        container.innerHTML += `<h3><a href="${p.url}" target="_blank">${p.name}</a> <span class="triangle" onclick="toggleSpecs(${i})">Info</span></h3><div class="specs-panel" id="specs-${i}" style="display:none;"></div>`;
+        container.innerHTML += `<h3><a href="${p.url}" target="_blank">${p.name}</a> <span class="info" onclick="toggleSpecs(${i})">Info</span></h3><div class="specs-panel" id="specs-${i}" style="display:none;"></div>`;
         p.specs.forEach(s => {
             document.getElementById('specs-' + i).innerHTML += `<p>${s.label}: ${s.value}</p>`
         });
@@ -63,7 +63,7 @@ function toggleSpecs(i) {
 }
 
 document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('triangle')) {
+    if (event.target.classList.contains('info')) {
         return;
     }
     document.querySelectorAll('.specs-panel').forEach(p => p.style.display = 'none');
