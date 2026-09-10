@@ -23,7 +23,9 @@ and ofcourse as it was a mission on pixl
 - JavaScript
 
 ## Ai usuage
-I just used to learn the transition thng in which when pages were turned the smoth transition i was first doing it direct then i thought of a better thing with it i searched on ai for it and i got the smooth transition i have used this smooth transition in revious projects but i had forgotten the code so ha to look up in google 
+# NEAT EXPLANATION ON PIXL WEBSITE (like this is also good but there its the better one)
+
+I just used to learn the transition thng in which when pages were turned the smoth transition i was first doing it direct then i thought of a better thing with it i searched on ai for it and i got the smooth transition i have used this smooth transition in previous projects but i had forgotten the code so ha to look up in google 
 
 ## Built for
 
